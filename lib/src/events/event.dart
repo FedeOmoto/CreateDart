@@ -133,12 +133,17 @@ class Event {
    * Provides a chainable shortcut method for setting a number of properties on
    * the instance.
    */
-  Event set() {
-    // TODO
+  Event set(Map<Symbol, Object> props) {
+    InstanceMirror im = reflect(this);
+
+    props.forEach((Symbol fieldName, Object value) {
+      im.setField(fieldName, value);
+    });
+
     return this;
   }
 
   /// Returns a string representation of this object.
   @override
-  String toString() => '[${runtimeType.toString()} (type=$type)]';
+  String toString() => '[${runtimeType} (type=$type)]';
 }

@@ -259,14 +259,8 @@ class EventDispatcher {
 
   /// Returns a string representation of this object.
   @override
-  String toString() => '[${runtimeType.toString()}]';
+  String toString() => '[${runtimeType}]';
 
-  /**
-   * @method _dispatchEvent
-   * @param {Object | String | Event} eventObj
-   * @param {Object} eventPhase
-   * @protected
-   **/
   void _dispatchEvent(Event event, int eventPhase) {
     Map<String, Set<EventListener>> listeners = eventPhase == 1 ?
         _captureListeners : _listeners;

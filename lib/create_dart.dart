@@ -14,5 +14,7 @@
 
 library create_dart;
 
+import 'dart:mirrors';
+
 part 'src/events/event.dart';
 part 'src/events/event_dispatcher.dart';
