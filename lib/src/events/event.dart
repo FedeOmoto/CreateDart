@@ -14,8 +14,6 @@
 
 part of create_dart;
 
-typedef EventListener(Event event, [Object data]);
-
 /**
  * Contains properties and methods shared by all events for use with
  * EventDispatcher.

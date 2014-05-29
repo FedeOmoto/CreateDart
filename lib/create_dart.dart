@@ -14,6 +14,7 @@
 
 library create_dart;
 
+@MirrorsUsed(targets: const [Event])
 import 'dart:mirrors';
 
 part 'src/events/event.dart';

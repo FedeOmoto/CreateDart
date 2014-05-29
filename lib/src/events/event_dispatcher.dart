@@ -14,6 +14,8 @@
 
 part of create_dart;
 
+typedef EventListener(Event event, [dynamic data]);
+
 /**
  * EventDispatcher provides methods for managing queues of event listeners and
  * dispatching events.
