@@ -125,9 +125,9 @@ class EventDispatcher {
    *                      }
    *              }
    */
-  EventListener on(String type, EventListener listener, [bool once =
-      false, Object data, bool useCapture = false]) {
-    return addEventListener(type, (Event event, [Object data]) {
+  EventListener on(String type, EventListener listener, {bool once:
+      false, dynamic data, bool useCapture: false}) {
+    return addEventListener(type, (Event event, [dynamic data]) {
       listener(event, data);
       if (once) event.remove();
     }, useCapture);
